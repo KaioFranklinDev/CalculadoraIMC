@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-screen justify-center items-center bg-gray-600">
+    <div className="text-center flex flex-col items-center bg-slate-200 h-full min-h-screen">
       <CalcIMC/>
       <Footer/>
     </div>

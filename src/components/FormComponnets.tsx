@@ -1,5 +1,6 @@
 import React from "react";
 import Buttons from "@/components/Buttons";
+import Link from "next/link";
 
 interface FormProps {
   nome: string;
@@ -35,7 +36,9 @@ const FormComponent: React.FC<FormProps> = ({ nome, peso, altura, IMC, data, onN
         <input type="text" value={data} readOnly />
       </div>
       <div className="campoform flex items-center">
-        <Buttons label="Gravar" funcBtn={onSave} />
+        <Buttons  label="Gravar" funcBtn={onSave} />
+        <Link className="w-[200px] mt-3  bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded"
+                href={'/'}>Cancelar</Link>
       </div>
     </div>
   );

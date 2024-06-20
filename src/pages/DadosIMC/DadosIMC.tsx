@@ -83,6 +83,7 @@ import { useRouter } from "next/router";
 import { v4 as uuidv4 } from 'uuid'; // Importando o UUID corretamente
 import FormComponent from "@/components/FormComponnets";
 import UsersTable from "@/components/PreTabelaUsers";
+import Link from "next/link";
 
 export default function DadosIMC() {
   const router = useRouter();
@@ -129,7 +130,7 @@ export default function DadosIMC() {
         },
         body: JSON.stringify(user),
       });
-
+      alert('Para a lista atualizada aparecer pode demorar ate 10s, aguarde!')
       if (response.ok) {
         fetchUsers(); // Atualizar a lista de usuários após a gravação
       } else {
@@ -152,6 +153,7 @@ export default function DadosIMC() {
         onNomeChange={setNome}
         onSave={handleSave}
       />
+      
       <UsersTable users={users} />
     </div>
   );
