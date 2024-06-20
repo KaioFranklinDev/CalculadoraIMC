@@ -12,19 +12,19 @@ export default function TabelaIMC(props:TabaleIMCProps){
                 <div>Abaixo do peso</div>
                 <div>Inferior a 18,5</div>
             </div>
-            <div className={"border-2 " + (props.valueIMC<=24.9 && props.valueIMC>=18.5?"bg-green-500":"bg-slate-400")}>
+            <div className={"border-2 " + (props.valueIMC<25 && props.valueIMC>=18.5?"bg-green-500":"bg-slate-400")}>
                 <div>Peso Normal</div>
                 <div>Entre 18,5 e 24,9</div>
             </div>
-            <div className={"border-2 " + (props.valueIMC<=29.9 && props.valueIMC>=25?"bg-red-400":"bg-slate-400")}>
+            <div className={"border-2 " + (props.valueIMC<30 && props.valueIMC>=25?"bg-red-400":"bg-slate-400")}>
                 <div>Sobre Peso</div>
                 <div>Entre 25 e 29.9</div>
             </div>
-            <div className={"border-2 " + (props.valueIMC<=34.9 && props.valueIMC>=30?"bg-red-500":"bg-slate-400")}>
+            <div className={"border-2 " + (props.valueIMC<35 && props.valueIMC>=30?"bg-red-500":"bg-slate-400")}>
                 <div>Obesidade Grau I</div>
                 <div>Entre 30 e 34,9</div>
             </div>
-            <div  className={"border-2 " + (props.valueIMC<=39.9 && props.valueIMC>=35?"bg-red-600":"bg-slate-400")}>
+            <div  className={"border-2 " + (props.valueIMC<40 && props.valueIMC>=35?"bg-red-600":"bg-slate-400")}>
                 <div>Obesidade Grau II</div>
                 <div>Entre 35 e 39,9</div>
             </div>

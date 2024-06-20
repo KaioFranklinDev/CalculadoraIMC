@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.campoform{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+}
+.campoform input {
+    border: 1px solid #000 ;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
